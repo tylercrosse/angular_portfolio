@@ -1,24 +1,18 @@
-
-
 (function () {
   'use strict';
 
-  var portfolioControllers = angular.module('portfolioControllers', []);
+  // angular
+  // .module('app')
+  // .controller('ProfileController', function () {});
 
-  portfolioControllers.controller('RootController', [
-    '$stateParams'
-  ]);
+  var portfolioControllers = angular.module('app');
 
-  portfolioControllers.controller('ProfileController', [
-    '$stateParams'
-  ]);
+  portfolioControllers.controller('RootController', function () {});
 
-  portfolioControllers.controller('ProjectsController', [
-    '$stateParams'
-  ]);
+  portfolioControllers.controller('ProfileController', function () {});
 
-  portfolioControllers.controller('BlogController', [
-    '$stateParams'
-  ]);
+  portfolioControllers.controller('ProjectsController', function () {});
+
+  portfolioControllers.controller('BlogController', function () {});
 
 } ());
