@@ -31,12 +31,6 @@
       controller: 'ProjectsController',
       controllerAs: 'ProjectsViewModel'
     })
-    .state('projects', {
-      url: '/projects/:id',
-      templateUrl: 'js/projects.html',
-      controller: 'ProjectsController',
-      controllerAs: 'ProjectsViewModel'
-    })
     .state('blog', {
       url: '/blog',
       templateUrl: 'js/blog.html',
