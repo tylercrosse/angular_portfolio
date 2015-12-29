@@ -4,12 +4,27 @@
   angular
     .module('app', [
       'ui.router',
-      'ngResource'
+      'ngResource',
+      'hc.marked'
     ])
     .config([
       '$stateProvider',
       RouterFunction
-    ]);
+    ])
+    .config([
+      'markedProvider', function (markedProvider) {
+      markedProvider.setOptions({
+        gfm: true,
+        tables: true,
+        highlight: function (code, lang) {
+          if (lang) {
+            return hljs.highlight(lang, code, true).value;
+          } else {
+            return hljs.highlightAuto(code).value;
+          }
+        }
+      });
+    }]);
 
   function RouterFunction($stateProvider) {
     $stateProvider
@@ -33,9 +48,19 @@
     })
     .state('blog', {
       url: '/blog',
-      templateUrl: 'js/blog.html',
+      templateUrl: 'js/blogIndex.html',
       controller: 'BlogController',
       controllerAs: 'BlogViewModel'
+    })
+    .state('blog.selected_post', {
+      url: '/blog/:postId',
+      template: '<div><h1>Welcome to your inbox</h1>\
+               <a ui-sref="blog.priority">Show priority</a>\
+               <div ui-view></div>\
+               </div>',
+       controller: function($scope, $stateParams) {
+         $scope.postId = $stateParams.postId;
+       }
     });
   }
 

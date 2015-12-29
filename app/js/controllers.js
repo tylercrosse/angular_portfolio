@@ -13,6 +13,17 @@
 
   portfolioControllers.controller('ProjectsController', function () {});
 
-  portfolioControllers.controller('BlogController', function () {});
+  portfolioControllers.controller('BlogController', function ($scope) {
+    this.isVisible = false;
+    this.toggleEl = function () {
+      console.log("toggled");
+      if (this.isVisible) {
+        this.isVisible = false;
+      }
+      else {
+        this.isVisible = true;
+      }
+    };
+  });
 
 } ());
