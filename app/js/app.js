@@ -52,8 +52,8 @@
       controller: 'BlogController',
       controllerAs: 'BlogViewModel'
     })
-    .state('blog.selected_post', {
-      url: '/blog/:postId',
+    .state('blog.article', {
+      url: '/blog/:articleId',
       template: '<div><h1>Welcome to your inbox</h1>\
                <a ui-sref="blog.priority">Show priority</a>\
                <div ui-view></div>\

@@ -24,6 +24,10 @@
         this.isVisible = true;
       }
     };
+    $scope.posts = [
+      'post1',
+      'post2'
+    ];
   });
 
 } ());

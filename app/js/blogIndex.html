@@ -1,5 +1,8 @@
-<div><a data-ui-sref="blog.selected_post({ id: selected_post.id })">Post</a></div>
-
+<div ng-repeat="post in posts">
+  {{post}}
+  <a data-ui-sref="blog.article">{{post}}</a>
+</div>
+<!-- <div><a data-ui-sref="blog.selected_post({ id: selected_post.id })">Post</a></div> -->
 <!-- <div ng-controller="BlogController as BlogViewModel">
   <div ng-click="BlogViewModel.toggleEl()">Post 1</div>
   <div ng-show="BlogViewModel.isVisible">
