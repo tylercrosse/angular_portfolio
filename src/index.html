@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tyler Crosse</title>
+  <link rel="stylesheet" href="../assets/css/normalize.css">
+  <link rel="stylesheet" href="../assets/css/mainStyle.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+  <div class="container">
+
+    <nav class="mainNav">
+      <ul>
+        <li><img ng-src="../assets/img/TClogo.svg" alt="T/C"></li>
+        <li><a data-ui-sref="profile">Profile</a></li>
+        <li><a data-ui-sref="projects">Projects</a></li>
+        <li><a data-ui-sref="blog">Blog</a></li>
+      </ul>
+    </nav>
+
+    <div class="content-container">
+      <main data-ui-view></main>
+    </div>
+
+  </div>
+
+</body>
+</html>
