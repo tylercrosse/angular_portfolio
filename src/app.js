@@ -9,7 +9,7 @@
       'hc.marked',
 
       // Feature areas
-      // 'app.projects',
+      'app.projects',
       'app.blog'
     ])
     .config([

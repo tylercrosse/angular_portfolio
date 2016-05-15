@@ -2,7 +2,7 @@
 
 (function() {
   angular
-    .module('app')
+    .module('app.projects')
     .controller('ProjIndexCtlr', ProjIndexCtlrFunc);
 
   function ProjIndexCtlrFunc() {

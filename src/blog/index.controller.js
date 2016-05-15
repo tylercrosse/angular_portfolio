@@ -2,7 +2,7 @@
 
 (function() {
   angular
-    .module('app')
+    .module('app.blog')
     .controller('BlogIndexCtlr', BlogIndexCtlrFunc);
 
   function BlogIndexCtlrFunc() {

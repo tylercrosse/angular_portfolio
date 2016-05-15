@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-(function(){
+(function() {
   angular
     .module('app.projects', [])
 })();
